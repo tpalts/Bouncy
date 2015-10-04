@@ -323,9 +323,9 @@ trait BouncyTrait {
         if ($fields) {
             $body = $fields;
         }
-        // Or get the model's modified fields.
+        // Or get the model's fields
         elseif ($this->isDirty()) {
-            $body = $this->getDirty();
+            $body = $this->documentFields();
         }
         else {
             return true;
